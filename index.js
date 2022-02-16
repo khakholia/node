@@ -56,7 +56,7 @@ connection.connect((err) => {
   })
 
   // add
-  app.get("/newinvoice", (req, res) => {
+  app.post("/newinvoice", (req, res) => {
     if (!req.query.amount) {
       res.json({ error: "Amount required" })
       return
@@ -90,7 +90,7 @@ connection.connect((err) => {
   })
 
   // update
-  app.get("/updateInvoice", (req, res) => {
+  app.put("/updateInvoice", (req, res) => {
     if (!req.query.id) {
       res.json({ error: "Id required" })
       return
@@ -108,7 +108,7 @@ connection.connect((err) => {
   })
 
   // delete
-  app.get("/deleteInvoice", (req, res) => {
+  app.delete("/deleteInvoice", (req, res) => {
     if (!req.query.id) {
       res.json({ error: "Id required" })
       return
