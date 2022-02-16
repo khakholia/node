@@ -8,7 +8,7 @@ var connection = mysql.createConnection({
   host: 'localhost',
   user: 'root',
   password: 'root1234',
-  database: 'accounts_module'
+  database: 'mall_accounts'
 });
 connection.connect((err) => {
   if (err) { console.log("DB Connection Failed."); return }
